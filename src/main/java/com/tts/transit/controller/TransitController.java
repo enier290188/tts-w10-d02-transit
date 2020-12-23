@@ -17,7 +17,7 @@ public class TransitController {
     @Autowired
     private TransitService apiService;
 
-    @GetMapping("/buses")
+    @GetMapping({"/buses", "/"})
     public String getBusesPage(Model model) {
         model.addAttribute("request", new BusRequest());
         return "index";
